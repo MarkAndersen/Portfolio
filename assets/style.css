@@ -1,26 +1,139 @@
+:root {
+    --border: rgb(172, 172, 190);
+    --header: rgb(144, 190, 190);
+}
+
 * {
-    background-color: black;
+    background-color: rgb(31, 53, 46);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 header {
-    height: 50px;
-    display: block;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(31, 53, 46);
+    max-height: 10vh;
+    border: double var(--border);
 }
-
+header h1 {
+    margin: auto;
+    color: rgb(144, 190, 190);
+    background-color: transparent;
+}
 .navbar {
-    display: inline-block;
-    position: relative;
-    background-color: chocolate;
-    height: 50px;
-    width: 33%;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: transparent;
+    border-left: double var(--border);
+    width: 26%;   
 }
 .navbar div {
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: cornflowerblue;
-    color: crimson;
+    justify-content: space-around;
+    margin: auto;
+    background-color: transparent;
+    color: var(--header);
+    
+}
+.navbar div p {
+    margin: auto;
+    background-color: transparent;
+    font-size: 1em;
+}
+figure {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+    background-color: transparent
+}
+.sideheader {
+    width: 25vw;
+    color: var(--header);
+    text-align: right;
+    border-right:  double var(--border);
+}
+.bio {
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    align-items: stretch;
+    border-top:  double var(--border);
+    border-bottom: double var(--border);
+}
+.bio p {
+  margin: auto;
+  background-color: transparent;
+  font-size: 1vw;
+  width: 75vw;
+}
+.work {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.linkblock {
+    width: 75vw;
+    border-bottom: double var(--border);
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: chartreuse;
+    font-size: 1vw;
+    border-bottom: double var(--border);
+    margin: 10px 0;
+}
+.links a {
+    width: 64px;
+    height: 64px;
+    background-color: blueviolet;
+}
+.links p {
+    background-color: transparent;
+    margin: auto;
+    flex-grow: 1;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid var(--border);
+}
+.contact section {
+    display: flex;
+    width: 75vw;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    font-size: 1vw;
+    color: seashell;
+    
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: rgb(74, 173, 157);
+}
+footer h2 {
+    background-color: transparent;
+    text-align: center;
+    color: whitesmoke;
 }
 @media screen and (max-width: 992px) {
 
