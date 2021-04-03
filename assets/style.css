@@ -9,6 +9,16 @@
     padding: 0;
     margin: 0;
 }
+a {
+    color: var(--header);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+}
+a:hover {
+    filter: brightness(150%);
+    opacity: 100%;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -39,23 +49,25 @@ header h1 {
     width: 26%;   
 }
 .navbar div {
-    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
     margin: auto;
-    background-color: transparent;
-    color: var(--header);
-    
 }
-.navbar div p {
+.navbar div p{
+    display: flex;
+    flex-direction: row;
     margin: auto;
     background-color: transparent;
-    font-size: 1em;
 }
 figure {
     display: flex;
     justify-content: center;
     align-content: center;
     height: 400px;
-    background-color: transparent
+    background-color: transparent;
+}
+figure img {
+    width: 100%;
 }
 .sideheader {
     width: 25vw;
@@ -66,13 +78,14 @@ figure {
 .bio {
     display: flex;
     flex-direction: row;
-    background-color: teal;
+    background-color: transparent;
     align-items: stretch;
     border-top:  double var(--border);
     border-bottom: double var(--border);
 }
 .bio p {
   margin: auto;
+  color: var(--header);
   background-color: transparent;
   font-size: 1vw;
   width: 75vw;
@@ -84,27 +97,45 @@ figure {
     flex-grow: 1;
 }
 .linkblock {
+    display: flex;
+    flex-flow: row wrap;
     width: 75vw;
     border-bottom: double var(--border);
 }
 .links {
-    display: flex;
-    flex-direction: row;
+    width: 22vw;
+    margin: 0;
     flex-grow: 1;
-    background-color: chartreuse;
-    font-size: 1vw;
-    border-bottom: double var(--border);
-    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: double var(--border);
 }
-.links a {
-    width: 64px;
-    height: 64px;
-    background-color: blueviolet;
+.linksHoriseon {
+    width: 72vw;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: double var(--border);
+    position: relative;
 }
-.links p {
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    /* left: 20px; */
+    width: 100%;
     background-color: transparent;
-    margin: auto;
-    flex-grow: 1;
+    color: var(--header);
+    
+  }
+.text-block h1 {
+    background-color: transparent;
+}
+.linkblock img {
+    width: 100%;
+    opacity: 30%;
 }
 .contact {
     display: flex;
@@ -119,10 +150,7 @@ figure {
     justify-content: space-evenly;
     margin: auto;
     font-size: 1vw;
-    color: seashell;
-    
 }
-
 footer {
     margin-top: auto;
     bottom: 0;
