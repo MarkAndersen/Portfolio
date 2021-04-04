@@ -1,3 +1,5 @@
+
+/*colors that were used throughout*/
 :root {
     --border: rgb(172, 172, 190);
     --header: rgb(144, 190, 190);
@@ -16,6 +18,7 @@ a {
     text-decoration: none;
     font-size: large;
 }
+/*feedback for the user to know they could click on the link*/
 a:hover {
     filter: brightness(150%);
     opacity: 100%;
@@ -68,6 +71,7 @@ figure {
     height: 400px;
     background-color: transparent;
 }
+/*Image was overrunning width of the page at smaller screen sizes */
 figure img {
     max-width: 100vw;
 }
@@ -116,6 +120,7 @@ figure img {
     border: double var(--border);
     position: relative;
 }
+/*Differentiated the link to my first application, by making image much larger than the accompanying 3, resized below with media queries*/
 .linksHoriseon {
     width: 72vw;
     margin: 0;
@@ -155,6 +160,7 @@ figure img {
 .contact section a {
     font-size: 1em;
 }
+/* made footing stick to the bottom of the page statically*/
 footer {
     margin-top: auto;
     bottom: 0;
@@ -166,12 +172,13 @@ footer h2 {
     text-align: center;
     color: whitesmoke;
 }
+    /* tablet size */
 @media screen and (max-width: 992px) {
     .navbar div {
         border-right: double var(--border);
     }
 }
-
+    /* large phone size */
 @media screen and (max-width: 768px) {
     * {
         font-size: small;
@@ -185,15 +192,28 @@ footer h2 {
     .linksHoriseon {
         width: 72vw;
     }
+    /* phone size */
 @media screen and (max-width: 426px) {
     * {
         font-size: smaller;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .bio p {
+        font-size: 1em;
     }
     .contact {
         min-height: 5vh;
     }
     a {
-        font-size: smaller;
+        font-size: .7em;
+    }
+    .sideheader {
+        font-size: 2em;
+    }
+    .text-block  {
+        font-size: 2em;
     }
     
 }
