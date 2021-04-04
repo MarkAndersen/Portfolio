@@ -8,6 +8,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a {
     color: var(--header);
@@ -27,7 +28,6 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -46,12 +46,14 @@ header h1 {
     justify-content: space-around;
     background-color: transparent;
     border-left: double var(--border);
-    width: 26%;   
+    width: 26vw;   
 }
 .navbar div {
     display: flex;
     flex-direction: row;
     margin: auto;
+    font-size: 2em;
+    background-color: transparent;
 }
 .navbar div p{
     display: flex;
@@ -67,7 +69,7 @@ figure {
     background-color: transparent;
 }
 figure img {
-    width: 100%;
+    max-width: 100vw;
 }
 .sideheader {
     width: 25vw;
@@ -87,14 +89,16 @@ figure img {
   margin: auto;
   color: var(--header);
   background-color: transparent;
-  font-size: 1vw;
+  font-size: 1em;
   width: 75vw;
 }
 .work {
-    background-color: blue;
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    border-top:  double var(--border);
+    border-bottom: double var(--border);
 }
 .linkblock {
     display: flex;
@@ -110,6 +114,7 @@ figure img {
     align-items: center;
     margin: 0;
     border: double var(--border);
+    position: relative;
 }
 .linksHoriseon {
     width: 72vw;
@@ -124,11 +129,9 @@ figure img {
 .text-block {
     position: absolute;
     bottom: 20px;
-    /* left: 20px; */
     width: 100%;
     background-color: transparent;
     color: var(--header);
-    
   }
 .text-block h1 {
     background-color: transparent;
@@ -145,16 +148,16 @@ figure img {
 .contact section {
     display: flex;
     width: 75vw;
-    flex-grow: 1;
     flex-direction: row;
     justify-content: space-evenly;
     margin: auto;
-    font-size: 1vw;
+}
+.contact section a {
+    font-size: 1em;
 }
 footer {
     margin-top: auto;
     bottom: 0;
-    flex-shrink: 0;
     padding: 20px;
     background-color: rgb(74, 173, 157);
 }
@@ -164,9 +167,35 @@ footer h2 {
     color: whitesmoke;
 }
 @media screen and (max-width: 992px) {
-
+    .navbar div {
+        border-right: double var(--border);
+    }
 }
 
 @media screen and (max-width: 768px) {
+    * {
+        font-size: small;
+    }
+    a {
+        font-size: small;
+    }
+    .links {
+        width: 72vw;
+    }
+    .linksHoriseon {
+        width: 72vw;
+    }
+@media screen and (max-width: 426px) {
+    * {
+        font-size: smaller;
+    }
+    .contact {
+        min-height: 5vh;
+    }
+    a {
+        font-size: smaller;
+    }
     
+}
+
 }
